@@ -1,0 +1,27 @@
+.marquee-wrap {
+  overflow: hidden;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(110, 71, 59, 0.2);
+  border-bottom: 1px solid rgba(110, 71, 59, 0.2);
+  background: var(--black);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 3rem;
+  white-space: nowrap;
+  animation: marquee 18s linear infinite;
+}
+
+.marquee-item {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--earth);
+  flex-shrink: 0;
+}
+
+.marquee-dot {
+  color: var(--sand);
+  font-style: normal;
+}
