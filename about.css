@@ -1,0 +1,21 @@
+:root {
+  /* Brand palette */
+  --ink:   #291C0E;
+  --earth: #6E473B;
+  --sand:  #A78D78;
+  --mist:  #BEB5A9;
+  --cream: #E1D4C2;
+  --white: #F8F5F0;
+  --black: #0D0908;
+
+  /* Typography */
+  --font-heading: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body:    'Inter', sans-serif;
+
+  /* Spacing */
+  --section-pad-desktop: 7rem 4rem;
+  --section-pad-mobile:  4.5rem 1.25rem;
+
+  /* Transitions */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}

@@ -1,0 +1,77 @@
+# Ved Patil — Portfolio Website
+
+Personal portfolio for **Ved Patil**, freelance video editor and beginner graphic designer based in Maharashtra, India.
+
+## Live Demo
+Deploy on GitHub Pages: `https://yourusername.github.io/ved-portfolio`
+
+---
+
+## Project Structure
+
+```
+ved-portfolio/
+├── index.html              ← Main HTML (all sections)
+├── css/
+│   ├── reset.css           ← Box-sizing, margin resets
+│   ├── variables.css       ← Brand colors, fonts, spacing tokens
+│   ├── base.css            ← Body, buttons, shared components
+│   ├── nav.css             ← Navigation + mobile burger menu
+│   ├── hero.css            ← Full-screen hero section
+│   ├── marquee.css         ← Scrolling ticker strip
+│   ├── about.css           ← About / photo section
+│   ├── work.css            ← YouTube video cards grid
+│   ├── contact.css         ← Contact info + form
+│   ├── footer.css          ← Footer
+│   ├── animations.css      ← Keyframes + scroll-reveal classes
+│   └── responsive.css      ← Tablet + mobile breakpoints
+├── js/
+│   ├── cursor.js           ← Custom cursor (desktop only)
+│   ├── nav.js              ← Scroll frosted-nav + burger toggle
+│   ├── reveal.js           ← IntersectionObserver scroll reveals
+│   └── video.js            ← Hero video muted autoplay
+└── assets/
+    ├── images/
+    │   └── ved-photo.jpg   ← Profile photo
+    └── video/
+        └── hero-bg.mp4     ← Background video for hero
+```
+
+---
+
+## How to Deploy on GitHub Pages
+
+1. Create a new GitHub repository named `ved-portfolio` (or any name)
+2. Upload all files maintaining the folder structure above
+3. Go to **Settings → Pages**
+4. Set source to **Deploy from a branch → main → / (root)**
+5. Click **Save** — your site will be live at `https://yourusername.github.io/ved-portfolio`
+
+---
+
+## Customisation
+
+| What to change | Where |
+|---|---|
+| Brand colors | `css/variables.css` → `:root` |
+| Your name / intro text | `index.html` → `#about` section |
+| YouTube video IDs | `index.html` → `#work` section (update `v=VIDEO_ID`) |
+| Contact details | `index.html` → `#contact` section |
+| Profile photo | Replace `assets/images/ved-photo.jpg` |
+| Hero background video | Replace `assets/video/hero-bg.mp4` |
+
+---
+
+## Tech Stack
+
+- **HTML5** — semantic markup
+- **CSS3** — custom properties, grid, flexbox, keyframe animations
+- **Vanilla JS** — no frameworks, no dependencies
+- **Google Fonts** — Inter (body)
+- **Helvetica Neue** — system font for all headings
+- **YouTube oEmbed thumbnails** — loaded directly from YouTube CDN
+
+---
+
+## Browser Support
+Chrome · Safari · Firefox · Edge · Mobile Safari · Chrome Android

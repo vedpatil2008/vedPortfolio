@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <meta name="theme-color" content="#0D0908"/>
+  <meta name="description" content="Ved Patil — Freelance Video Editor & Graphic Designer based in Maharashtra, India."/>
+  <title>Ved Patil — Video Editor</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/reset.css"/>
+  <link rel="stylesheet" href="css/variables.css"/>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/nav.css"/>
+  <link rel="stylesheet" href="css/hero.css"/>
+  <link rel="stylesheet" href="css/marquee.css"/>
+  <link rel="stylesheet" href="css/about.css"/>
+  <link rel="stylesheet" href="css/work.css"/>
+  <link rel="stylesheet" href="css/contact.css"/>
+  <link rel="stylesheet" href="css/footer.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+</head>
+<body>
+
+  <!-- ── CUSTOM CURSOR (desktop only) ── -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ── NAVIGATION ── -->
+  <nav id="mainNav">
+    <a href="#" class="nav-logo">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M6 12L20 36L34 20L6 12Z" fill="#291C0E" stroke="#A78D78" stroke-width="1.5"/>
+        <line x1="10" y1="14" x2="16" y2="11" stroke="#E1D4C2" stroke-width="1.5" opacity="0.7"/>
+        <line x1="16" y1="19" x2="22" y2="16" stroke="#E1D4C2" stroke-width="1.5" opacity="0.5"/>
+      </svg>
+      <span class="nav-logo-text">Ved Patil</span>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Mobile burger -->
+    <button class="burger" id="burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile full-screen menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="menu-link">About</a>
+    <a href="#work" class="menu-link">Work</a>
+    <a href="#contact" class="menu-link">Contact</a>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="hero-video-wrap">
+      <div class="hero-fallback"></div>
+      <video autoplay muted loop playsinline id="heroVideo">
+        <source src="assets/video/hero-bg.mp4" type="video/mp4"/>
+      </video>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Video Editor · Beginner Graphic Designer · Creative</p>
+      <h1 class="hero-headline">Editing Stories<br/>That <em>Hit Different.</em></h1>
+      <p class="hero-sub">I turn raw footage into something people actually want to watch.<br/>Available for freelance video editing.</p>
+      <div class="hero-ctas">
+        <a href="#work" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-outline">Hit Me Up</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── MARQUEE ── -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item">Video Editing</span><span class="marquee-dot"> · </span>
+      <span class="marquee-item">Colour Grading</span><span class="marquee-dot"> · </span>
+      <span class="marquee-item">Reels &amp; Shorts</span><span class="marquee-dot"> · </span>
+      <span class="marquee-item">YouTube Edits</span><span class="marquee-dot"> · </span>
+      <span class="marquee-item">Graphic Design</span><span class="marquee-dot"> · </span>
+      <span class="marquee-item">Filmmaking</span><span class="marquee-dot"> · </span>
+      <span class="marquee-item">Photography</span><span class="marquee-dot"> · </span>
+      <span class="marquee-item">Visual Storytelling</span><span class="marquee-dot"> · </span>
+      <!-- duplicate for seamless loop -->
+      <span class="marquee-item">Video Editing</span><span class="marquee-dot"> · </span>
+      <span class="marquee-item">Colour Grading</span><span class="marquee-dot"> · </span>
+      <span class="marquee-item">Reels &amp; Shorts</span><span class="marquee-dot"> · </span>
+      <span class="marquee-item">YouTube Edits</span><span class="marquee-dot"> · </span>
+      <span class="marquee-item">Graphic Design</span><span class="marquee-dot"> · </span>
+      <span class="marquee-item">Filmmaking</span><span class="marquee-dot"> · </span>
+      <span class="marquee-item">Photography</span><span class="marquee-dot"> · </span>
+      <span class="marquee-item">Visual Storytelling</span><span class="marquee-dot"> · </span>
+    </div>
+  </div>
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-photo-wrap reveal">
+        <img src="assets/images/ved-photo.jpg" alt="Ved Patil" class="about-photo"/>
+      </div>
+      <div class="about-text">
+        <span class="section-label reveal">About Me</span>
+        <h2 class="section-title reveal reveal-delay-1">The editor<br/>behind the <em>cut.</em></h2>
+        <p class="about-intro reveal reveal-delay-2">
+          <strong>Hey, I'm Ved.</strong> I'm 18, in college, and spending most of my free time in a timeline — cutting, colour grading, and figuring out how to make footage actually feel like something. I also dabble in graphic design when the creative itch hits. Every edit I make is another rep. Still learning, always improving.
+        </p>
+        <p class="about-casual reveal reveal-delay-3">"Still figuring things out — but the work speaks for itself."</p>
+        <div class="skills-grid reveal reveal-delay-4">
+          <span class="skill-tag">Video Editing</span>
+          <span class="skill-tag">Colour Grading</span>
+          <span class="skill-tag">Reels &amp; Shorts</span>
+          <span class="skill-tag">YouTube Edits</span>
+          <span class="skill-tag">Transitions &amp; VFX</span>
+          <span class="skill-tag">Graphic Design</span>
+          <span class="skill-tag">Thumbnail Design</span>
+          <span class="skill-tag">Poster Design</span>
+          <span class="skill-tag">Photography</span>
+          <span class="skill-tag">Filmmaking</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── WORK ── -->
+  <section id="work">
+    <div class="work-header">
+      <span class="section-label reveal">Featured Work</span>
+      <h2 class="section-title reveal reveal-delay-1">Edits that <em>speak.</em></h2>
+      <p class="work-desc reveal reveal-delay-2">A collection of projects, visuals, and stories I've crafted through editing, photography, and video.</p>
+    </div>
+
+    <div class="work-grid">
+      <a href="https://www.youtube.com/watch?v=RtzIsbz1NLs&autoplay=1" target="_blank" rel="noopener" class="work-card reveal">
+        <div class="work-card-thumb">
+          <img src="https://img.youtube.com/vi/RtzIsbz1NLs/maxresdefault.jpg" alt="Creative Video 01" loading="lazy"/>
+          <div class="play-icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="#E1D4C2" stroke-width="1.5"/><path d="M19 16L33 24L19 32V16Z" fill="#E1D4C2"/></svg>
+          </div>
+          <span class="yt-badge">YouTube</span>
+        </div>
+        <div class="work-card-info">
+          <div class="work-card-label">Video · Filmmaking</div>
+          <div class="work-card-title">Creative Video 01</div>
+          <div class="work-card-desc">A visual story crafted with intention and cinematic detail.</div>
+        </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=eSY_fQZ1QG4&autoplay=1" target="_blank" rel="noopener" class="work-card reveal reveal-delay-1">
+        <div class="work-card-thumb">
+          <img src="https://img.youtube.com/vi/eSY_fQZ1QG4/maxresdefault.jpg" alt="Creative Video 02" loading="lazy"/>
+          <div class="play-icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="#E1D4C2" stroke-width="1.5"/><path d="M19 16L33 24L19 32V16Z" fill="#E1D4C2"/></svg>
+          </div>
+          <span class="yt-badge">YouTube</span>
+        </div>
+        <div class="work-card-info">
+          <div class="work-card-label">Video · Editing</div>
+          <div class="work-card-title">Creative Video 02</div>
+          <div class="work-card-desc">Editing meets storytelling in this raw, genuine cut.</div>
+        </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=i64GmJyeIiQ&autoplay=1" target="_blank" rel="noopener" class="work-card reveal reveal-delay-2">
+        <div class="work-card-thumb">
+          <img src="https://img.youtube.com/vi/i64GmJyeIiQ/maxresdefault.jpg" alt="Creative Video 03" loading="lazy"/>
+          <div class="play-icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="23" stroke="#E1D4C2" stroke-width="1.5"/><path d="M19 16L33 24L19 32V16Z" fill="#E1D4C2"/></svg>
+          </div>
+          <span class="yt-badge">YouTube</span>
+        </div>
+        <div class="work-card-info">
+          <div class="work-card-label">Video · Photography</div>
+          <div class="work-card-title">Creative Video 03</div>
+          <div class="work-card-desc">Life documented through a lens — unfiltered and real.</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="contact-inner">
+      <span class="section-label reveal">Get in Touch</span>
+      <h2 class="contact-headline reveal reveal-delay-1">Got footage?<br/>Let's make it <em>worth watching.</em></h2>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal reveal-delay-2">
+          <div class="contact-item">
+            <div class="contact-item-label">Email</div>
+            <a href="mailto:vedantpatil.vp6460@gmail.com" class="contact-item-val">vedantpatil.vp6460@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-label">Phone</div>
+            <a href="tel:+918208166820" class="contact-item-val">+91 82081 66820</a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-label">Location</div>
+            <span class="contact-item-val">Pandharpur, Maharashtra, India</span>
+          </div>
+          <div class="social-row">
+            <a href="https://www.instagram.com/heyy.ved_/" target="_blank" rel="noopener" class="social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+              Instagram
+            </a>
+            <a href="https://www.youtube.com/@zakkasPatil2008" target="_blank" rel="noopener" class="social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
+              </svg>
+              YouTube
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form reveal reveal-delay-3">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" autocomplete="name"/>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="your@email.com" autocomplete="email"/>
+          </div>
+          <div class="form-group">
+            <label for="project">Project Type</label>
+            <select id="project">
+              <option value="">Select a project type</option>
+              <option>Video Editing</option>
+              <option>Reels / Shorts</option>
+              <option>YouTube Video Edit</option>
+              <option>Colour Grading</option>
+              <option>Graphic Design</option>
+              <option>Thumbnail Design</option>
+              <option>Poster Design</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Tell me about your project..."></textarea>
+          </div>
+          <button class="form-submit" type="button">Start a Project →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <a href="#" class="footer-logo">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <path d="M6 12L20 36L34 20L6 12Z" fill="#291C0E" stroke="#A78D78" stroke-width="1.5"/>
+        <line x1="10" y1="14" x2="16" y2="11" stroke="#E1D4C2" stroke-width="1.5" opacity="0.7"/>
+        <line x1="16" y1="19" x2="22" y2="16" stroke="#E1D4C2" stroke-width="1.5" opacity="0.5"/>
+      </svg>
+      Ved Patil
+    </a>
+    <span class="footer-tagline">Cutting frames. Telling stories.</span>
+    <span class="footer-copy">© 2026 Ved Patil. All rights reserved.</span>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/cursor.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/video.js"></script>
+
+</body>
+</html>
