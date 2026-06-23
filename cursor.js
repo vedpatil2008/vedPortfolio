@@ -1,23 +1,26 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+// Custom cursor — only active on non-touch devices
+(function () {
+  if (window.matchMedia('(pointer: coarse)').matches) return;
 
-html {
-  scroll-behavior: smooth;
-  -webkit-tap-highlight-color: transparent;
-}
+  const cursor   = document.getElementById('cursor');
+  const follower = document.getElementById('cursorFollower');
+  if (!cursor || !follower) return;
 
-img, video {
-  display: block;
-  max-width: 100%;
-}
+  document.addEventListener('mousemove', function (e) {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top  = e.clientY + 'px';
+    follower.style.left = e.clientX + 'px';
+    follower.style.top  = e.clientY + 'px';
+  });
 
-button, input, select, textarea {
-  font: inherit;
-}
-
-a {
-  color: inherit;
-}
+  document.querySelectorAll('a, button').forEach(function (el) {
+    el.addEventListener('mouseenter', function () {
+      cursor.style.transform   = 'translate(-50%, -50%) scale(2)';
+      follower.style.transform = 'translate(-50%, -50%) scale(1.5)';
+    });
+    el.addEventListener('mouseleave', function () {
+      cursor.style.transform   = 'translate(-50%, -50%) scale(1)';
+      follower.style.transform = 'translate(-50%, -50%) scale(1)';
+    });
+  });
+})();

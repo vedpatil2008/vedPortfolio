@@ -1,77 +1,142 @@
-# Ved Patil — Portfolio Website
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 4rem;
+  background: linear-gradient(to bottom, rgba(13,9,8,0.7) 0%, transparent 100%);
+  transition: background 0.3s, backdrop-filter 0.3s;
+}
 
-Personal portfolio for **Ved Patil**, freelance video editor and beginner graphic designer based in Maharashtra, India.
+nav.scrolled {
+  background: rgba(13, 9, 8, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
 
-## Live Demo
-Deploy on GitHub Pages: `https://yourusername.github.io/ved-portfolio`
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--cream);
+}
 
----
+.nav-logo svg {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
 
-## Project Structure
+.nav-logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
 
-```
-ved-portfolio/
-├── index.html              ← Main HTML (all sections)
-├── css/
-│   ├── reset.css           ← Box-sizing, margin resets
-│   ├── variables.css       ← Brand colors, fonts, spacing tokens
-│   ├── base.css            ← Body, buttons, shared components
-│   ├── nav.css             ← Navigation + mobile burger menu
-│   ├── hero.css            ← Full-screen hero section
-│   ├── marquee.css         ← Scrolling ticker strip
-│   ├── about.css           ← About / photo section
-│   ├── work.css            ← YouTube video cards grid
-│   ├── contact.css         ← Contact info + form
-│   ├── footer.css          ← Footer
-│   ├── animations.css      ← Keyframes + scroll-reveal classes
-│   └── responsive.css      ← Tablet + mobile breakpoints
-├── js/
-│   ├── cursor.js           ← Custom cursor (desktop only)
-│   ├── nav.js              ← Scroll frosted-nav + burger toggle
-│   ├── reveal.js           ← IntersectionObserver scroll reveals
-│   └── video.js            ← Hero video muted autoplay
-└── assets/
-    ├── images/
-    │   └── ved-photo.jpg   ← Profile photo
-    └── video/
-        └── hero-bg.mp4     ← Background video for hero
-```
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
 
----
+.nav-links a {
+  color: var(--mist);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.3s;
+}
 
-## How to Deploy on GitHub Pages
+.nav-links a:hover {
+  color: var(--cream);
+}
 
-1. Create a new GitHub repository named `ved-portfolio` (or any name)
-2. Upload all files maintaining the folder structure above
-3. Go to **Settings → Pages**
-4. Set source to **Deploy from a branch → main → / (root)**
-5. Click **Save** — your site will be live at `https://yourusername.github.io/ved-portfolio`
+/* Burger — hidden on desktop */
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  flex-direction: column;
+  gap: 5px;
+}
 
----
+.burger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--cream);
+  transition: all 0.3s;
+}
 
-## Customisation
+.burger.open span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
 
-| What to change | Where |
-|---|---|
-| Brand colors | `css/variables.css` → `:root` |
-| Your name / intro text | `index.html` → `#about` section |
-| YouTube video IDs | `index.html` → `#work` section (update `v=VIDEO_ID`) |
-| Contact details | `index.html` → `#contact` section |
-| Profile photo | Replace `assets/images/ved-photo.jpg` |
-| Hero background video | Replace `assets/video/hero-bg.mp4` |
+/* Mobile fullscreen menu */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 9, 8, 0.98);
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s;
+}
 
----
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: all;
+}
 
-## Tech Stack
+.mobile-menu a {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--cream);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  transition: color 0.2s;
+}
 
-- **HTML5** — semantic markup
-- **CSS3** — custom properties, grid, flexbox, keyframe animations
-- **Vanilla JS** — no frameworks, no dependencies
-- **Google Fonts** — Inter (body)
-- **Helvetica Neue** — system font for all headings
-- **YouTube oEmbed thumbnails** — loaded directly from YouTube CDN
+.mobile-menu a:hover,
+.mobile-menu a:active {
+  color: var(--sand);
+}
 
----
+/* Custom cursor */
+.cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: var(--sand);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease;
+}
 
-## Browser Support
-Chrome · Safari · Firefox · Edge · Mobile Safari · Chrome Android
+.cursor-follower {
+  position: fixed;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(167, 141, 120, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: all 0.18s ease;
+}
